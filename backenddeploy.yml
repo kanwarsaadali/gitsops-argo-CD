@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: backend-deployment
+  name: backend:25
 spec:
   replicas: 4
   selector:
     matchLabels:
-      app: backend
+      app: backend:25
   template:
     metadata:
       labels:
-        app: backend
+        app: backend:25
     spec:
       containers:
-        - name: backend
-          image: kanwarsaad/backend:v2
+        - name: backend:25
+          image: kanwarsaad/backend:25
           env:
             - name: MONGODB_URI
               value: "mongodb://kanwar-sikandar-ali-todo:mukarram1361@mongo-service:27017"
