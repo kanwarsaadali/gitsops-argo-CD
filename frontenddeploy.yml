@@ -13,7 +13,7 @@ spec:
         app: frontend:21
     spec:
       containers:
-        - name: frontend:21
+        - name: frontendcontainer
           image: kanwarsaad/frontend:21
           env:
             - name: REACT_APP_API_URL
