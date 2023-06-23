@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend:20
+  name: frontendDeploy
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: frontend:20
+      app: frontendsvc
   template:
     metadata:
       labels:
-        app: frontend:20
+        app: frontendsvc
     spec:
       containers:
         - name: frontend:20
