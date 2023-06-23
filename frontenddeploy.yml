@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend:6
+  name: frontend:7
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: frontend:6
+      app: frontend:7
   template:
     metadata:
       labels:
-        app: frontend:6
+        app: frontend:7
     spec:
       containers:
-        - name: frontend:6
-          image: kanwarsaad/frontend:6
+        - name: frontend:7
+          image: kanwarsaad/frontend:7
           env:
             - name: REACT_APP_API_URL
               value: "http://backend-service:80"
