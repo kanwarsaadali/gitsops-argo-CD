@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontendDeploy
+  name: frontenddeploy
 spec:
   replicas: 1
   selector:
@@ -13,10 +13,11 @@ spec:
         app: frontendsvc
     spec:
       containers:
-        - name: frontend:20
+        - name: frontend-20
           image: kanwarsaad/frontend:20
           env:
             - name: REACT_APP_API_URL
               value: "http://backend-service:80"
           ports:
             - containerPort: 3000
+
